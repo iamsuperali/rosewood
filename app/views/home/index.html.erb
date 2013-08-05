@@ -60,7 +60,7 @@
                 <h4><%=link_to r.title, r%></h4>
                 <div><span><strong>套/件:</strong></span><%=r.piece%></div>
                 <div><span><strong>材质:</strong></span><%=r.material%></div>
-                <!--<p>testf时来运转挂衣架时来运转挂衣架时来运转挂衣架时来运转挂衣架</p>-->
+               
               </div>
             </li>
           <%end%>
@@ -114,12 +114,9 @@
     </div-->
     <div class="index_menu">
       <ul id="index_product_nav">
-        <li><a href="index.php?m=Product&a=drawing-room" class="menu_03">客厅家具系列</a></li>
-        <li><a href="index.php?m=Product&a=dining-hall" class="menu_04">餐厅家具系列</a></li>
-        <li><a href="index.php?m=Product&a=bedroom" class="menu_05">卧房家具系列</a></li>
-        <li><a href="index.php?m=Product&a=study" class="menu_06">书房家具系列</a></li>
-        <li><a href="index.php?m=Product&a=lounge" class="menu_07">休闲家具系列</a></li>
-        <li><a href="index.php?m=Product&a=classic" class="menu_08">古典家具系列</a></li>
+        <%@categories.each do |c|%>
+          <li><%=link_to c.name,c%></li>
+        <%end%>
       </ul>
     </div>
   </div>

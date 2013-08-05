@@ -1,4 +1,4 @@
-source 'http://rubygems.org'
+source 'http://ruby.taobao.org'
 
 gem 'rails', '3.2.8'
 
@@ -16,8 +16,7 @@ gem "simple-navigation"
 gem 'acts_as_list'
 gem "wice_grid", '3.2.0.pre1'
 gem 'simple_form'
-gem 'execjs'
-gem 'therubyracer'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
