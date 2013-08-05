@@ -1,0 +1,17 @@
+<div id="rosewood" class="form">
+  <%= simple_form_for(@rosewood, 
+    :url => (@rosewood.id.blank? ? rosewoods_path : rosewood_path(@rosewood)) ) do |f| %>
+
+    <div class="inputs">
+      <%= f.input :title,:label=>"标题" %>
+      <%= f.association :category,:label=>"分类"%>
+      <%= f.input :piece,:label=>"件数" %>
+      <%= f.input :material,:label=>"材质 " %>
+      <%= f.input :description, :as => :ckeditor,:label=>"描述" %>
+      <%= f.input :image,:label=>"上传图片" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "提交", :class => "btn btn-primary" %> 或者 <%= link_to '返回', rosewoods_path %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,34 @@
+<div class="product_li">
+  <table width="335" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td height="185" colspan="6" align="center" valign="middle">
+        <%=link_to image_tag(rosewood_item.image.url(:medium)),rosewood_item%>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="6" class="c_6f1"><%=rosewood_item.title%></th>
+    </tr>
+    <tr>
+      <td colspan="6"><div class="dash_line"></div></td>
+    </tr>
+    <!--tr>
+      <td colspan="6"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th width="52" align="left" valign="top" class="c_6f1">风 格：</th>
+            <td width="97" align="left" valign="top"></td>
+            <th width="52" align="left" valign="top" class="c_6f1">类 别：</th>
+            <td width="134" align="left" valign="top"></td>
+          </tr>
+        </table>
+    </tr-->
+    <tr>
+      <th width="52" valign="top" class="c_6f1" colspan="3">木 种：</th>
+      <td width="283" align="left" valign="top" colspan="3"><%=rosewood_item.material%></td>
+    </tr>
+     <tr>
+      <th width="52" valign="top" class="c_6f1" colspan="3">件 数：</th>
+      <td width="283" align="left" valign="top" colspan="3"><%=rosewood_item.piece%></td>
+    </tr>
+
+  </table>
+</div>

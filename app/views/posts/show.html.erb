@@ -1,0 +1,51 @@
+<% content_for :title, "得泰居古典红木家具有限公司- #{@post.title}" %>
+
+<!--右侧 -->
+<div class="p_lmain">
+
+  <div id="breadcrumbs">
+    <a href="/">首页</a> /
+    <a href="/home/news">公司新闻</a> / <%=@post.title%>
+  </div>
+
+  <!--当前位置end -->
+  <div class="n_hr_line"></div>
+  <!--主栏目标题 -->
+  <div class="title_news"><h2>公司新闻</h2></div>
+
+  <!--内容区 -->
+  <div class="news">
+    <!--文章内容 -->
+    <div class="title"><%=@post.title%></div>
+    <div class="title2"><%=@post.created_at.strftime("%Y-%m-%d") %></div>
+    <%=@post.content.html_safe%>
+  </div>
+
+  <div class="blank29"></div>
+  <div class="dash_line"></div>
+  <div class="blank29"></div>
+
+
+  <%if @pre_post %>
+    <div class="previous_btn">
+      <%=link_to "上一篇：#{@pre_post.title}",@pre_post%>
+    </div>
+  <%end%>
+
+  <%if @next_post %>
+    <div class="next_btn">
+      <%=link_to "下一篇：#{@next_post.title}",@next_post%>
+    </div>
+  <%end%>
+
+  <div class="backt_btn"><a href="/home/news" target="_self">返回</a></div>
+</div>
+
+<div class="left2">
+  <div class="menu1 menu_news">
+
+  </div>
+</div>
+
+
+<div class="blank33"></div>

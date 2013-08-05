@@ -1,0 +1,81 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title><%=h yield(:title) %></title>
+      <meta name="description" content="得泰居古典红木家具有限公司" />
+      <meta name="keywords" content="" />
+
+      <link rel="shortcut icon" href="<%=asset_path("favicon.ico")-%>" />
+      <%= javascript_include_tag :application %>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+      
+      <script type="text/javascript">
+        $(function () {
+          //数字导航切换及自定义当前数字的class
+          $('#change_3 .a_bigImg img').soChange({
+            thumbObj:'#change_3 .ul_change_a2 span',
+            thumbNowClass:'on',//自定义导航对象当前class为on
+            changeTime:5000//自定义切换时间为4000ms
+          });
+        });
+      </script>
+
+      <SCRIPT LANGUAGE="JavaScript">
+        <!--
+
+        //Visit http://rainbow.arch.scriptmania.com for this script
+        //Change the beginning date (ie: 1997) and 
+        //copyright text (ie: Rainbow Arch) to your own.
+
+        today=new Date();
+        y0=today.getFullYear();
+
+        // end hiding --->
+      </SCRIPT>
+
+  </head>
+
+  <body>
+    <div class="containerde">
+
+      <div class="header">
+        <div class="nav_bg">
+          <div class="logo"><a href="/" target="_self" title="得泰居红木">得泰居红木</a></div>
+          <div class="menu_tp">
+            <ul id="nav">
+              <li class="nav01  nactive "><a href="/" title="首页" name="yhtop" id="yhtop"><span>首页</span></a></li>
+              <li class="nav02 "><a href="/home/news" title="得泰居 公司新闻"><span>公司新闻</span></a></li>
+              <li class="nav03 "><a href="/home/rosewoods" title="得泰居 产品中心"><span>产品中心</span></a></li>
+              <li class="nav04 "><a href="/home/customer_stories" title="得泰居 客户案例"><span>客户案例</span></a></li>
+              <li class="nav05 "><a href="/pages/2" title="得泰居 关于我们"><span>关于我们</span></a></li>
+              <li class="nav06 "><a href="/pages/1" title="得泰居 联系我们"><span>联系我们</span></a></li>
+            </ul>
+            <div class="blank0"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main_body imain_body">
+        <%= yield %>
+      </div>
+
+      <!--index内容 end-->
+      <div class="blank33"></div>
+      <!--产品信息列表 -->
+      <div class="footer_b_bg">
+        <div class="icards">
+          <div class="ic_info">Copyright© 
+            <SCRIPT LANGUAGE="JavaScript">
+              <!--- Hide from old browsers
+              document.write(y0);
+              // end hiding --->
+            </SCRIPT> 
+            得泰居古典红木家具有限公司 All Rights Reserved <br /></div>
+        </div>
+        <div class="footer_shadow"></div>
+      </div>
+    </div>
+  </body>
+</html>

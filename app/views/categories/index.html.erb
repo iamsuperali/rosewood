@@ -1,0 +1,33 @@
+<%= content_for :sitemap do %>
+  <span class="current">列表</span>
+<% end %>
+
+<%= content_for :base_sitemap do %>
+  <ul class="breadcrumb">
+    <li><a href="/admin/index">管理后台</a> <span class="divider">/</span></li>
+    <li class="active">产品分类</li>
+  </ul>
+<% end %>
+
+<div class="tools">
+  <a href="<%= categories_path %>" class=btn btn-info">查看所有</a>
+  <a href="<%= new_category_path %>" class="btn btn-success">新建</a>
+</div>
+
+<div id="categories">
+  <%= grid(@categories_grid, :show_filters => :always) do |g|
+    #g.column :name => 'id', :attribute => 'id',  filter: false
+    g.column :name => '分类名称', :attribute => 'name', filter: false
+
+    g.column :name => '创建时间', :attribute => 'created_at',filter: false do |c|
+      c.created_at.strftime("%Y-%m-%d")
+    end
+
+    g.column :name => '操作' do |c|
+      raw "#{link_to '修改', edit_category_path(c.id)}
+    #{link_to '删除', category_path(c.id), :method => :delete, :confirm => '确定要删除吗?'}"
+    end
+  end %>
+</div>
+
+

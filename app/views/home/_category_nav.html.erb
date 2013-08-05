@@ -1,0 +1,6 @@
+<div class="menu1 menu_pro">
+  <div class="menu <%="activce_m" unless params[:id]  -%>" ><a href="/home/rosewoods" target="_self">最新产品</a></div>
+  <%Category.find(:all).each do |c|%>
+    <div class="menu <%="activce_m" if c.id.to_s == params[:id]  -%>"><%=link_to c.name,c%></div>
+  <%end%>
+</div>

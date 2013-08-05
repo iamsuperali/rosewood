@@ -1,0 +1,128 @@
+<div class="index_con">
+  <!--banner-->
+  <div class="eachBox">
+    <p class="p" id="prev2"><img src="<%=asset_path("banner_left_btn.png")%>" /></p>
+    <div class="changeBox_a1" id="change_3">
+
+      <% @slides.each do |s|%>
+        <a href="<%=s.link%>" class="a_bigImg">
+          <img src="<%=s.image.url(:medium)%>" width="903" height="256">
+        </a>
+      <%end%>
+
+      <ul class="ul_change_a2">
+        <li><span><img src="<%=asset_path("banner_number_01.GIF")%>"></span></li>
+        <li><span><img src="<%=asset_path("banner_number_02.GIF")%>"></span></li>
+      </ul>
+    </div>
+    <p class="n" id="next2"><img src="<%=asset_path("banner_right_btn.png")%>"></p>
+  </div>
+  <!--banner end-->
+
+  <!--index内容-->
+  <div class="index_left_box">
+    <div class="path1">
+      <div class="con_list fl">
+        <div class="listItem">
+          <h3 class="title">
+            <span class="t_02">公司新闻</span>
+            <a href="index.php?m=Product" class="more">更 多</a>
+          </h3>
+        </div>
+        <div class="list">
+          <ul>
+            <%@posts.each do |p| %>
+              <li>
+                <span class="time"><%=p.created_at.strftime("%Y-%m-%d")%></span>
+                <%=link_to p.title,p%>
+              </li>
+            <%end%>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="path2">
+      <div class="listItem">
+        <h3 class="title">
+          <span class="t_03">精品展示</span>
+          <a href="index.php?m=Product" class="more">更 多</a>
+        </h3>
+      </div>
+      <div class="show_list">
+        <ul>
+
+          <%@rosewoods.each do |r|%>
+            <li>
+              <div class="img_box">
+                <%=link_to image_tag(r.image.url(:thumb)), r%>
+              </div>
+              <div class="txt_box">
+                <h4><%=link_to r.title, r%></h4>
+                <div><span><strong>套/件:</strong></span><%=r.piece%></div>
+                <div><span><strong>材质:</strong></span><%=r.material%></div>
+                <!--<p>testf时来运转挂衣架时来运转挂衣架时来运转挂衣架时来运转挂衣架</p>-->
+              </div>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+
+      <div class="blank12"></div>
+      <div class="listItem">
+        <h3 class="title"><span class="t_04">联系我们</span></h3>
+      </div>
+      <!--<div class="list">-->
+      <div class="show_list">
+        <ul>
+          <li>
+            <div class="img_box">
+             <img src="<%=asset_path("zq_store.png")%>" height="117px" width="200px" />
+            </div>
+            <div class="txt_box">
+              <h4>肇庆市伴月店</h4>
+              <div><span><strong>电话:</strong></span>0758—2165899</div>
+              <div><span><strong>地址：</strong></span>广东省肇庆市伴月路翠庭湖轩首层</div>
+            </div>
+          </li>
+          <li>
+            <div class="img_box">
+              <img src="<%=asset_path("gaoyao_store.png")%>" height="117px" width="200px" />
+            </div>
+            <div class="txt_box">
+              <h4>高要市大湾店</h4>
+              <div><span><strong>电话:</strong></span>0758-8139899</div>
+              <div><span><strong>地址：</strong></span>广东省高要市大湾镇第一期开发区</div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--左侧 end-->
+
+  <div class="index_right_box">
+    <!--搜索 -->
+    <!--div class="pathA">
+      <div class="i_search_form">
+        <form onsubmit="return check_form()" action="index.php?m=Search" method="post" name="form1" id="form1">
+          <input type="submit" title="搜索" value=" " class="i_sear_ibtn">
+            <input type="text" value="" class="i_sear_iput_index" name="keyword" id="keyword">
+              <input type="hidden" name="__hash__" value="ccf2d281004182dc63acafb8c04e8539" /></form>
+       </div>
+              <div class="blank12"></div>
+    </div-->
+    <div class="index_menu">
+      <ul id="index_product_nav">
+        <li><a href="index.php?m=Product&a=drawing-room" class="menu_03">客厅家具系列</a></li>
+        <li><a href="index.php?m=Product&a=dining-hall" class="menu_04">餐厅家具系列</a></li>
+        <li><a href="index.php?m=Product&a=bedroom" class="menu_05">卧房家具系列</a></li>
+        <li><a href="index.php?m=Product&a=study" class="menu_06">书房家具系列</a></li>
+        <li><a href="index.php?m=Product&a=lounge" class="menu_07">休闲家具系列</a></li>
+        <li><a href="index.php?m=Product&a=classic" class="menu_08">古典家具系列</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--右侧 end-->
+  <div class="blank0"></div>
+</div>

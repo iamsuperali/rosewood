@@ -1,0 +1,37 @@
+<% content_for :title, "得泰居古典红木家具有限公司- 产品中心" %>
+<!--右侧 -->
+<div class="p_lmain"> 
+  <div class="localtion_bg">
+    <!--当前位置 -->
+    <div id="breadcrumbs">
+      <a href="/">首页</a> /
+      产品中心
+    </div>
+    <!--当前位置end -->
+  </div>    
+
+  <div class="n_hr_line"></div>
+  <!--主栏目标题 -->
+  <div class="title_pro">
+    <h2>精品展示</h2>
+  </div>
+  <!--栏目标题 -->
+  <div class="article_title">
+    <h3>最新产品</h3>
+  </div>
+  <!--内容区 -->
+  <div class="product_p">
+    <%= render partial: "/home/rosewood_item", collection: @rosewoods %>
+    <div class="dash_line"></div>
+  </div>
+
+  <div class="blank29"></div>
+</div>
+<!--右侧end -->
+<!--左侧 -->
+<div class="left2">
+  <%=render :partial =>"category_nav"%>
+</div>
+<!--左侧 -->
+<div class="blank33"></div>
+<!--产品信息列表 -->

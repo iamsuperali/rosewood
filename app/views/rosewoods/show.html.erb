@@ -1,0 +1,70 @@
+<% content_for :title, "得泰居古典红木家具有限公司- 产品中心- #{@rosewood.category.name}- #{@rosewood.title}" %>
+<!--右侧 -->
+<div class="p_lmain"> 
+  <div class="localtion_bg">
+    <!--当前位置 -->
+    <div id="breadcrumbs">
+      <a href="/">首页</a> / <a href="/home/rosewoods">产品中心</a> / 
+      <%=link_to @rosewood.category.name,@rosewood.category%> / <%=@rosewood.title%>
+
+    </div>
+    <!--当前位置end -->
+  </div>    
+
+  <div class="n_hr_line"></div>
+  <!--主栏目标题 -->
+  <div class="title_pro">
+    <h2>精品展示</h2>
+  </div>
+  <!--栏目标题 -->
+  <div class="article_title">
+    <h3><%=@rosewood.title%></h3>
+  </div>
+  <!--内容区 -->
+  <div class="product_p">
+    <div class="blank16"></div>
+    <div class="table_pro_de_info">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0"  class="table_pde_info">
+        <tr>
+          <th width="9%" align="right" valign="top">木 种：</th>
+          <td width="43%" valign="top"><%=@rosewood.material%></td>
+          <th width="9%" align="right" valign="top">件/套：</th>
+          <td width="39%" valign="top"><%=@rosewood.piece%></td>
+        </tr>
+        <!--tr>
+          <th width="9%" align="right" valign="top">类 别：</th>
+          <td width="43%" valign="top"></td>
+          <th width="9%" align="right" valign="top">木材产地：</th>
+          <td width="39%" valign="top">老挝</td>
+        </tr-->
+        <!--tr>
+          <th width="9%" align="right" valign="top">可选漆面：</th>
+          <td width="43%" valign="top"></td>
+          <th width="9%" align="right" valign="top">件/套：</th>
+          <td width="39%" valign="top">6</td>
+        </tr-->
+      </table>
+      <div class="blank12"></div>
+      <div class="table_pro_t">商品详细说明:</div>
+      <div class="table_pro_p"></div>
+    </div>
+    <%=image_tag @rosewood.image.url(:content)%>
+
+    <div class="dash_line"></div>
+  </div>
+
+  <div class="blank29"></div>
+</div>
+<!--右侧end -->
+<!--左侧 -->
+<div class="left2">
+  <div class="menu1 menu_pro">
+    <div class="menu <%="activce_m" unless params[:id]  -%>" ><a href="/home/rosewoods" target="_self">最新产品</a></div>
+    <%Category.find(:all).each do |c|%>
+      <div class="menu <%="activce_m" if c.id == @rosewood.category_id  -%>"><%=link_to c.name,c%></div>
+    <%end%>
+  </div>
+</div>
+<!--左侧 -->
+<div class="blank33"></div>
+<!--产品信息列表 -->
