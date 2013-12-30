@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     @posts = Post.find(:all,:limit=>6)
     @rosewoods = Rosewood.find(:all,:limit=>4)
     @categories = Category.find(:all)
+    @page = Page.find(1)
   end
     
   def news

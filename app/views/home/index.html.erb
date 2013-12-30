@@ -73,29 +73,7 @@
       </div>
       <!--<div class="list">-->
       <div class="show_list">
-        <ul>
-          <li>
-            <div class="img_box">
-             <img src="<%=asset_path("zq_store.png")%>" height="117px" width="200px" />
-            </div>
-            <div class="txt_box">
-              <h4>肇庆市伴月店</h4>
-              <div><span><strong>电话:</strong></span>0758—2165899</div>
-              <div><span><strong>地址：</strong></span>广东省肇庆市伴月路翠庭湖轩首层</div>
-            </div>
-          </li>
-          <li>
-            <div class="img_box">
-              <img src="<%=asset_path("gaoyao_store.png")%>" height="117px" width="200px" />
-            </div>
-            <div class="txt_box">
-              <h4>高要市大湾店</h4>
-              <div><span><strong>电话:</strong></span>0758-8139899</div>
-              <div><span><strong>地址：</strong></span>广东省高要市大湾镇第一期开发区</div>
-
-            </div>
-          </li>
-        </ul>
+         <%=@page.content.html_safe%>
       </div>
     </div>
   </div>

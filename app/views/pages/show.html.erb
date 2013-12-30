@@ -5,7 +5,7 @@
     <!--当前位置 -->
     <div id="breadcrumbs">
       <a href="/">首页</a> / <%=@page.title%>
-     
+
 
     </div>
     <!--当前位置end -->
@@ -13,7 +13,8 @@
 
   <div class="n_hr_line"></div>
   <!--主栏目标题 -->
-  <div class="title_pro">
+  <div class="title_page">
+    <%=image_tag(asset_path("page#{@page.id}.png"))%>
   </div>
 
   <!--内容区 -->
